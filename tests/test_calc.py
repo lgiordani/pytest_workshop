@@ -7,6 +7,8 @@ test_pytest_workshop
 
 Tests for `pytest_workshop` module.
 """
+import pytest
+
 from pytest_workshop.calc import Calc
 
 
@@ -52,3 +54,8 @@ def test_div_two_numbers_float():
 
 def test_div_by_zero_returns_inf():
     assert Calc().div(5, 0) == "inf"
+
+
+def test_mul_by_zero_raises_exception():
+    with pytest.raises(ValueError):
+        Calc().mul(3, 0)
