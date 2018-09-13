@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from functools import reduce
+
 
 class Calc:
     def add(self, *s):
@@ -9,8 +11,4 @@ class Calc:
         return a - b
 
     def mul(self, *s):
-        res = 1
-        for i in s:
-            res = res * i
-
-        return res
+        return reduce(lambda x, y: x*y, s)
