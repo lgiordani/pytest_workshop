@@ -40,3 +40,7 @@ def test_mul_many_numbers():
     s = range(1, 10)
 
     assert Calc().mul(*s) == 362880
+
+
+def test_div_two_numbers():
+    assert Calc().div(22, 2) == 11
