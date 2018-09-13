@@ -4,3 +4,6 @@
 class Calc:
     def add(self, *s):
         return sum(s)
+
+    def sub(self, a, b):
+        return a - b
