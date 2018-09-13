@@ -34,3 +34,9 @@ def test_sub_two_numbers():
 
 def test_mul_two_numbers():
     assert Calc().mul(6, 4) == 24
+
+
+def test_mul_many_numbers():
+    s = range(1, 10)
+
+    assert Calc().mul(*s) == 362880
