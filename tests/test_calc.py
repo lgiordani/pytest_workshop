@@ -44,3 +44,7 @@ def test_mul_many_numbers():
 
 def test_div_two_numbers():
     assert Calc().div(22, 2) == 11
+
+
+def test_div_two_numbers_float():
+    assert Calc().div(13, 2) == 6.5
