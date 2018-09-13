@@ -20,3 +20,9 @@ def test_add_two_numbers():
 
 def test_add_three_numbers():
     assert Calc().add(4, 5, 6) == 15
+
+
+def test_add_many_numbers():
+    s = range(100)
+
+    assert Calc().add(*s) == 4950
