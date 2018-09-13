@@ -21,10 +21,13 @@ class Calc:
 
         return a/b
 
-    def avg(self, it, ut=None):
+    def avg(self, it, lt=None, ut=None):
         if not ut:
             ut = max(it)
 
-        _it = [x for x in it if x <= ut]
+        if not lt:
+            lt = min(it)
+
+        _it = [x for x in it if x <= ut and x >= lt]
 
         return sum(_it)/len(_it)
