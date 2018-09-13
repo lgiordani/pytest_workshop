@@ -87,3 +87,7 @@ def test_avg_manages_empty_list():
 
 def test_avg_manages_empty_list_after_outlier_removal():
     assert Calc().avg([12, 98], lt=15, ut=90) == 0
+
+
+def test_avg_manages_outlier_removal_from_empty_list():
+    assert Calc().avg([], lt=15, ut=90) == 0
