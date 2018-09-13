@@ -14,4 +14,7 @@ class Calc:
         return reduce(lambda x, y: x*y, s)
 
     def div(self, a, b):
+        if not b:
+            return "inf"
+
         return a/b
