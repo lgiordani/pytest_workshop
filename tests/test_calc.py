@@ -71,3 +71,11 @@ def test_avg_removes_upper_outliers():
 
 def test_avg_removes_lower_outliers():
     assert Calc().avg([2, 5, 12, 98], lt=10) == 55
+
+
+def test_avg_removes_upper_outliers_not_equal():
+    assert Calc().avg([2, 5, 12, 98], ut=12) == pytest.approx(6.333333)
+
+
+def test_avg_removes_lower_outliers_not_equal():
+    assert Calc().avg([2, 5, 12, 98], lt=12) == 55
