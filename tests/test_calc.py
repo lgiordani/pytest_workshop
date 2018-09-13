@@ -26,3 +26,7 @@ def test_add_many_numbers():
     s = range(100)
 
     assert Calc().add(*s) == 4950
+
+
+def test_sub_two_numbers():
+    assert Calc().sub(10, 3) == 7
