@@ -59,3 +59,10 @@ def test_div_by_zero_returns_inf():
 def test_mul_by_zero_raises_exception():
     with pytest.raises(ValueError):
         Calc().mul(3, 0)
+
+
+def test_avg_correct_average():
+    assert Calc().avg([2, 5, 12, 98]) == 29.25
+
+
+
