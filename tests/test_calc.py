@@ -67,3 +67,7 @@ def test_avg_correct_average():
 
 def test_avg_removes_upper_outliers():
     assert Calc().avg([2, 5, 12, 98], ut=90) == pytest.approx(6.333333)
+
+
+def test_avg_removes_lower_outliers():
+    assert Calc().avg([2, 5, 12, 98], lt=10) == 55
