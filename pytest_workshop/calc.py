@@ -12,3 +12,6 @@ class Calc:
 
     def mul(self, *s):
         return reduce(lambda x, y: x*y, s)
+
+    def div(self, a, b):
+        return a//b
