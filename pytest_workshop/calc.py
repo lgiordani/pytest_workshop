@@ -20,3 +20,6 @@ class Calc:
             return "inf"
 
         return a/b
+
+    def avg(self, it):
+        return sum(it)/len(it)
