@@ -11,6 +11,8 @@ class Calc:
         return a - b
 
     def mul(self, *s):
+        if not all(s):
+            raise ValueError
         return reduce(lambda x, y: x*y, s)
 
     def div(self, a, b):
