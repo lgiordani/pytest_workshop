@@ -33,4 +33,7 @@ class Calc:
 
         _it = [x for x in it if x <= ut and x >= lt]
 
+        if not len(_it):
+            return 0
+
         return sum(_it)/len(_it)
