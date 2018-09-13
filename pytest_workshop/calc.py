@@ -22,6 +22,9 @@ class Calc:
         return a/b
 
     def avg(self, it, lt=None, ut=None):
+        if not len(it):
+            return 0
+
         if not ut:
             ut = max(it)
 
