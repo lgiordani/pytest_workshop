@@ -30,3 +30,7 @@ def test_add_many_numbers():
 
 def test_sub_two_numbers():
     assert Calc().sub(10, 3) == 7
+
+
+def test_mul_two_numbers():
+    assert Calc().mul(6, 4) == 24
