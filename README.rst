@@ -1,40 +1,61 @@
-===============================
-pytest_workshop
-===============================
+"TDD in Python with pytest" workshop
+====================================
 
+This is a Python package used for the "TDD in Python with pytest"
+workshop. The ``master`` branch contains an empty project with no tests.
+The ``develop`` branch points to the full project, and each commit is a
+step in the workshop. The commit messages are prefixed with either "T"
+or "C", to show if that commit adds "Tests" or "Code".
 
-.. image:: https://img.shields.io/pypi/v/pytest_workshop.svg
-        :target: https://pypi.python.org/pypi/pytest_workshop
+The description of the project is the following:
 
-.. image:: https://img.shields.io/travis/lgiordani/pytest_workshop.svg
-        :target: https://travis-ci.org/lgiordani/pytest_workshop
+.. code:: txt
 
-.. image:: https://readthedocs.org/projects/pytest-workshop/badge/?version=latest
-        :target: https://pytest-workshop.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
+    The goal is to write a class Calc that performs calculations: addition, subtraction,
+    multiplication, and division. Addition and multiplication shall accept multiple arguments.
+    Division shall return a float and division by zero shall return the string "inf".
+    Multiplication by zero must raise a ValueError exception. The class will also provide
+    a function to compute the average of an iterable. This function gets two optional upper
+    and lower thresholds to remove outliers.
 
-.. image:: https://pyup.io/repos/github/lgiordani/pytest_workshop/shield.svg
-     :target: https://pyup.io/repos/github/lgiordani/pytest_workshop/
-     :alt: Updates
+(some of the requirements are silly but they help understanding some TDD
+concepts)
 
+Instructions
+------------
 
-A demo project
+1. Clone the repository
+2. Create a virtual environment: ``python3 -m venv <venvname>``
+3. Activate it: ``source <venvname>/bin/activate``
+4. Install requirements: ``pip install -r requirements/dev.txt``
+5. Edit the ``pytest.ini`` file and add the virtualenvironment to the
+   ``norecursedirs`` option
 
+.. code:: ini
 
-* Free software: MIT license
-* Documentation: https://pytest-workshop.readthedocs.io.
+    [pytest]
+    minversion = 2.0
+    norecursedirs = .git .tox requirements* <venvname>
+    python_files = test*.py
 
+6. Run ``pytest -svv`` to check that everything has been correctly
+   installed. You should get a result like
 
-Features
---------
+.. code:: txt
 
-* TODO
+    ==================================== test session starts ====================================
+    platform linux -- Python 3.6.6, pytest-3.0.7, py-1.7.0, pluggy-0.4.0 -- <PWD>
+    cachedir: .cache
+    rootdir: <PWD>, inifile: pytest.ini
+    plugins: cov-2.4.0
+    collected 0 items
+
+    =============================== no tests ran in 0.01 seconds ================================
 
 Credits
----------
+-------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
+This package was created with
+`Cookiecutter <https://github.com/audreyr/cookiecutter>`__ and the
+`lgiordani/cookiecutter-pypackage <https://github.com/lgiordani/cookiecutter-pypackage>`__
+project template.
