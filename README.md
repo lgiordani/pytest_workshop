@@ -19,7 +19,7 @@ and lower thresholds to remove outliers.
 ## Instructions
 
 1. Clone the repository
-2. Create a virtual environment: `python3 -m venv <venvname>`
+2. Create a virtual environment: `python3 -m venv <venvname>` (where <venvname> is the name of the environment, e.g. `myvenv`)
 3. Activate it: `source <venvname>/bin/activate`
 4. Install requirements: `pip install -r requirements/dev.txt`
 5. Edit the `pytest.ini` file and add the virtualenvironment to the `norecursedirs` option
