@@ -16,13 +16,16 @@ and lower thresholds to remove outliers.
 
 (some of the requirements are silly but they help understanding some TDD concepts)
 
-## Instructions
+## Instructions (for windows users change / to \)
 
 1. Clone the repository
-2. Create a virtual environment: `python3 -m venv <venvname>` (where <venvname> is the name of the environment, e.g. `myvenv`)
-3. Activate it: `source <venvname>/bin/activate`
-4. Install requirements: `pip install -r requirements/dev.txt`
-5. Edit the `pytest.ini` file and add the virtualenvironment to the `norecursedirs` option
+2. a) Create a virtual environment - pip: `python3 -m venv <venvname>` (where <venvname> is the name of the environment, e.g. `myvenv`)
+   b) Create a virtual environment - Conda: `conda create --name <venvname>` (where <venvname> is the name of the environment, e.g. `myvenv`)
+3. a) Activate it - pip: `source <venvname>/bin/activate`
+   b) Activate it - Conda: `conda activate <venvname>`
+4. Shift directory to where the cloned repo is stored
+5. Install requirements: `pip install -r requirements/dev.txt`
+6. Edit the `pytest.ini` file and add the virtualenvironment to the `norecursedirs` option
 
 ``` ini
 [pytest]
