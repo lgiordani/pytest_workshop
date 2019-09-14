@@ -16,7 +16,9 @@ and lower thresholds to remove outliers.
 
 (some of the requirements are silly but they help understanding some TDD concepts)
 
-## Instructions (for windows users change / to \ )
+## Instructions
+
+Windows users, please change all `/` to `\`
 
 1. Clone the repository
 2. 1. Create a virtual environment - pip: `python3 -m venv <venvname>` (where <venvname> is the name of the environment, e.g. `myvenv`)
